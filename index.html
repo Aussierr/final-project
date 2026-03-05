@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Discover Quezon Province</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+header{
+position:relative;
+height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+header img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+header::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+top:0;
+left:0;
+}
+
+.header-text{
+position:relative;
+z-index:1;
+}
+
+.header-text h1{
+font-size:38px;
+letter-spacing:1px;
+}
+
+.header-text p{
+font-size:18px;
+margin-top:10px;
+}
+
+/* NAVBAR */
+
+nav{
+background:#2c3e50;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:14px 22px;
+margin:8px;
+border-radius:25px;
+transition:0.3s;
+font-size:15px;
+}
+
+nav a:hover{
+background:#1abc9c;
+}
+
+nav a.active{
+background:#1abc9c;
+}
+
+/* CONTENT */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.section{
+background:white;
+margin-top:30px;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.section h2{
+margin-bottom:10px;
+}
+
+/* IMAGE GRID */
+
+.image-row{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin:20px 0;
+}
+
+.image-row img{
+width:31%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.image-row img:hover{
+transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.contact input,
+.contact textarea{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.contact button{
+padding:10px;
+background:#1abc9c;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.contact button:hover{
+background:#16a085;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+background:#2c3e50;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="images/map.jpg">
+
+<div class="header-text">
+<h1>Discover Quezon Province</h1>
+<p>Explore the beauty, culture, and history of Quezon Province</p>
+</div>
+
+</header>
+
+
+<nav>
+
+<a class="active" href="#home">🏠 Home</a>
+<a href="#kamay">⛪ Kamay ni Hesus</a>
+<a href="#real">🏖 Real Beach</a>
+<a href="#balagbag">⛰ Mt. Balagbag</a>
+<a href="#escudero">🏡 Villa Escudero</a>
+<a href="#about">📜 About Quezon</a>
+<a href="#contact">✉ Contact</a>
+
+</nav>
+
+
+<div class="container">
+
+<!-- HOME -->
+
+<div class="section" id="home">
+
+<h2>Welcome to Quezon Province</h2>
+
+<p>
+Quezon Province is one of the largest provinces in the CALABARZON region of the Philippines. It is known for its beautiful natural landscapes, historical landmarks, and rich cultural traditions. The province offers a variety of tourist attractions ranging from beaches and mountains to religious pilgrimage sites and cultural heritage destinations.
+</p>
+
+<p>
+The province is also known for its strong agricultural industry, especially coconut farming. Because of its large coconut plantations, Quezon Province is often called the Coconut Capital of the Philippines. The coconut industry plays an important role in supporting the livelihood of many families and communities across the province.
+</p>
+
+</div>
+
+
+<!-- KAMAY NI HESUS -->
+
+<div class="section" id="kamay">
+
+<h2>Kamay ni Hesus Shrine</h2>
+
+<div class="image-row">
+
+<img src="images/kamay1.jpg" onclick="openImg(this)">
+<img src="images/kamay2.jpg" onclick="openImg(this)">
+<img src="images/kamay3.jpg" onclick="openImg(this)">
+
+</div>
+
+<p>
+Kamay ni Hesus Shrine is a famous religious pilgrimage site located in Lucban, Quezon. It is known for the giant statue of the Risen Christ standing at the top of a hill. Visitors climb hundreds of steps to reach the statue while reflecting on their faith and devotion.
+</p>
+
+<p>
+The shrine attracts thousands of visitors every year, especially during Holy Week and religious celebrations. Many pilgrims visit the place for spiritual healing, prayer, and reflection.
+</p>
+
+</div>
+
+
+<!-- REAL BEACH -->
+
+<div class="section" id="real">
+
+<h2>Real Beach</h2>
+
+<div class="image-row">
+
+<img src="images/real1.jpg" onclick="openImg(this)">
+<img src="images/real2.jpg" onclick="openImg(this)">
+<img src="images/real3.jpg" onclick="openImg(this)">
+
+</div>
+
+<p>
+Real Beach is located in the municipality of Real, Quezon facing the Pacific Ocean. The beach is known for its strong waves which make it a popular destination for surfers and adventure seekers.
+</p>
+
+<p>
+Aside from surfing, visitors also enjoy swimming, beach camping, and relaxing by the shore. The peaceful coastal environment makes it a perfect destination for people who want to escape the busy city life.
+</p>
+
+</div>
+
+
+<!-- MT BALAGBAG -->
+
+<div class="section" id="balagbag">
+
+<h2>Mt. Balagbag</h2>
+
+<div class="image-row">
+
+<img src="images/balagbag1.jpg" onclick="openImg(this)">
+<img src="images/balagbag2.jpg" onclick="openImg(this)">
+<img src="images/balagbag3.jpg" onclick="openImg(this)">
+
+</div>
+
+<p>
+Mt. Balagbag is a scenic mountain destination known for its green hills, fresh mountain air, and wide landscape views. Many hikers and nature lovers visit the mountain to experience outdoor adventure and peaceful surroundings.
+</p>
+
+<p>
+The area surrounding the mountain is also important for agriculture and local communities that depend on natural resources for their livelihood.
+</p>
+
+</div>
+
+
+<!-- VILLA ESCUDERO -->
+
+<div class="section" id="escudero">
+
+<h2>Villa Escudero Plantation</h2>
+
+<div class="image-row">
+
+<img src="images/escudero1.jpg" onclick="openImg(this)">
+<img src="images/escudero2.jpg" onclick="openImg(this)">
+<img src="images/escudero3.jpg" onclick="openImg(this)">
+
+</div>
+
+<p>
+Villa Escudero Plantation is a historical resort located in Tiaong, Quezon. The plantation started as a coconut plantation during the Spanish colonial period and later developed into a cultural heritage destination.
+</p>
+
+<p>
+One of the most popular attractions in Villa Escudero is the Labasin Waterfalls Restaurant where visitors can enjoy traditional Filipino food while sitting beside a flowing waterfall. The place also features a museum and cultural performances that showcase Filipino traditions and history.
+</p>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
+
+<h2>About Quezon Province and its History</h2>
+
+<p>
+Quezon Province was formerly known as Tayabas during the Spanish colonial period. It was later renamed in honor of Manuel L. Quezon, the second President of the Philippines. The province has played an important role in agriculture, trade, and cultural development in the region.
+</p>
+
+<p>
+Today, Quezon Province continues to develop as a tourism destination while preserving its natural beauty, traditions, and cultural heritage.
+</p>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="section" id="contact">
+
+<h2>Message Us</h2>
+
+<form class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeImg()">
+<img id="lightbox-img">
+</div>
+
+
+<footer>
+
+<p>Created by: <b>AUSTIN JHON SORRETA</b></p>
+<p>Section: OLCA122E034</p>
+
+</footer>
+
+
+<script>
+
+function openImg(img){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=img.src;
+}
+
+function closeImg(){
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>
